@@ -9,7 +9,6 @@
 
 body {
   background-color: rgb(255, 255, 255);
-
 }
 .container {
   background-color: #0f172a;
@@ -115,7 +114,7 @@ body {
   list-style: none;
   gap: 20px;
 }
-.navbar-menu a{
+.navbar-menu a {
   color: #f8fafc;
   text-decoration: none;
 
@@ -126,66 +125,128 @@ body {
 .navbar-menu a:hover {
   color: #38bdf8;
 }
-.overlay{
+.overlay {
   display: none;
 }
 
+/* area main */
+.add-task-link {
+ color: #f8fafc;
+    font-size: 24px;
+    margin-right: 20px; /* Jarak dari tombol hamburger */
+    text-decoration: none;
+    transition: 0.3s;
+}
+.add-task-link:hover {
+    color: #38bdf8;
+    transform: scale(1.1);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20%;
+  color: #f8fafc;
+  justify-self: unset;
+  align-items: center;
+}
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.input-section input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 300px;
+}
+.input-section button {
+  background-color: #f8fafc;
+  color: #0f172a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.input-section button:hover {
+  transform: scale(1.1);
+  background-color: #42b8eb;
+  color: #f8fafc;
+  border: 2px solid #38bdf8;
+}
+
 @media (max-width: 768px) {
-    .checkbtn {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        color: #f8fafc;
-        z-index: 1001; /* Pastikan ikon di atas overlay */
-    }
-     #arrow {
-        display: block;
-    }
+  /* area sidebar */
+  .checkbtn {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: #f8fafc;
+    z-index: 1001; /* Pastikan ikon di atas overlay */
+  }
+  #arrow {
+    display: block;
+  }
 
-    .navbar-menu {
-        position: fixed;
-        width: 65%; /* Di HP jangan 30% kegedean, 70% biar pas */
-        height: 100vh;
-        background: rgba(30, 41, 59, 0.95); /* Lebih tebal dikit biar teks kebaca */
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        top: 0; /* Sidebar mulai dari atas layar */
-        right: -100%; /* Sembunyi di kanan */
-        transition: all 0.5s ease;
-        z-index: 1002;
-    }
-    .navbar-menu ul li{
-        text-align: center;
-    }
-    .navbar-menu a {
-        font-size: 24px;
-    }
+  .navbar-menu {
+    position: fixed;
+    width: 65%; /* Di HP jangan 30% kegedean, 70% biar pas */
+    height: 100vh;
+    background: rgba(30, 41, 59, 0.95); /* Lebih tebal dikit biar teks kebaca */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    top: 0; /* Sidebar mulai dari atas layar */
+    right: -100%; /* Sembunyi di kanan */
+    transition: all 0.5s ease;
+    z-index: 1002;
+  }
+  .navbar-menu ul li {
+    text-align: center;
+  }
+  .navbar-menu a {
+    font-size: 24px;
+  }
 
-    /* Munculkan sidebar pas dicentang */
-    #check:checked ~ .navbar-menu {
-        right: 0;
-    }
+  /* Munculkan sidebar pas dicentang */
+  #check:checked ~ .navbar-menu {
+    right: 0;
+  }
 
-    /* Munculkan overlay dan blur pas dicentang */
-    #check:checked ~ .overlay {
-        display: block;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(4px); /* Efek blur konten belakang */
-        z-index: 1000; /* Di bawah sidebar */
-    }
+  /* Munculkan overlay dan blur pas dicentang */
+  #check:checked ~ .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px); /* Efek blur konten belakang */
+    z-index: 1000; /* Di bawah sidebar */
+  }
 
-    .navbar-menu ul {
-        flex-direction: column;
-        padding-top: 80px; /* Kasih ruang biar gak ketutup judul */
-    }
+  .navbar-menu ul {
+    flex-direction: column;
+    padding-top: 80px; /* Kasih ruang biar gak ketutup judul */
+  }
 
-    .navbar-menu a span {
-        display: inline;
-        margin-left: 10px;
-    }
+  .navbar-menu a span {
+    display: inline;
+    margin-left: 10px;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  .main-content {
+    padding: 10%;
+  } 
+  h1{
+    font-size: 28px;
+  }  
+  .input-section input {
+    width: 70%;
+  }
 }

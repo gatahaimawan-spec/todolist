@@ -137,7 +137,7 @@ body {
 
     .navbar-menu {
         position: fixed;
-        width: 30%; /* Di HP jangan 30% kegedean, 70% biar pas */
+        width: 65%; /* Di HP jangan 30% kegedean, 70% biar pas */
         height: 100vh;
         background: rgba(30, 41, 59, 0.95); /* Lebih tebal dikit biar teks kebaca */
         backdrop-filter: blur(10px);

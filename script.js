@@ -1,12 +1,12 @@
 const inputan = document.querySelector("#todo-input");
 const tombol = document.querySelector("#task-btn");
-const wadah = document.querySelector("#task-list");
+const hapusSemua = document.querySelector("#btn-hapus");
+const daftarUL = document.querySelector("#task-list-ul");
 
 console.log("cek!");
-console.log("cek:", wadah);
+console.log("cek:", daftarUL);
 
 tombol.addEventListener("click", function () {
-
   //  TANGKI KOSONG
   const pesanan = inputan.value;
   // PENGISI TANGKI
@@ -23,11 +23,23 @@ tombol.addEventListener("click", function () {
     listBaru.remove();
   });
   listBaru.appendChild(tombolHapus);
-  wadah.appendChild(listBaru);
+  daftarUL.appendChild(listBaru);
   // PENEGASAN BAHWA TANGKI KOSONG
   inputan.value = "";
   //   SAKLAR SELESAI
   listBaru.addEventListener("click", function () {
-  listBaru.classList.toggle("selesai");
+    listBaru.classList.toggle("selesai");
+  });
 });
+
+hapusSemua.addEventListener("click", function () {
+  console.log("1.tomboldiklik");
+  const daftarUL = document.querySelector("#task-list-ul");
+  console.log("2.mencari ul");
+  if (daftarUL) {
+    daftarUL.innerHTML = ""; // clear content
+    console.log("3.haruskosong");
+  } else {
+    console.log("4.ultidakketemu");
+  }
 });

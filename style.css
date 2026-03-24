@@ -15,6 +15,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   min-height: 100vh;
+
 }
 
 /* ============================================================
@@ -152,7 +153,7 @@ body {
 .input-section {
   display: flex;
   gap: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .input-section input {
@@ -166,7 +167,7 @@ body {
   outline: none;
 }
 
-.input-section button {
+.input-section button{
   background-color: #38bdf8;
   color: #0f172a;
   border: none;
@@ -175,6 +176,8 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+
+
 
 /* Task List Items */
 #task-list ul {
@@ -195,6 +198,17 @@ body {
   color: #94a3b8 !important;
   opacity: 0.6;
 }
+.btnhps button{
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 2em;
+}
+
 
 .btn-hapus {
   background: none;
